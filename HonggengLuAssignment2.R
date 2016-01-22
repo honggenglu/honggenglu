@@ -2,6 +2,7 @@
 
 library(foreign)
 
+
 # 0
 HonggengLuAssignment2 <- list(
   firstName = "Honggeng",
