@@ -14,18 +14,13 @@ HonggengLuAssignment2 <- list(
 install.packages("repmis")
 library(repmis)
 diamondsURL <- source_data("https://raw.githubusercontent.com/EconomiCurtis/econ294_2015/master/data/diamonds.CSV")
-diamonds <- read.csv(  
-  text = diamondsURL
-)
-rm(diamondsURL)
-
-HonggengLuAssignment2$s1a <- dim(diamonds);HonggengLuAssignment2$s1a
+HonggengLuAssignment2$s1a <- nrow(diamondsURL);HonggengLuAssignment2$s1a
 #There're 7 obervations and 4 variables
-HonggengLuAssignment2$s1b <- ncol(diamonds);HonggengLuAssignment2$s1b
+HonggengLuAssignment2$s1b <- ncol(diamondsURL);HonggengLuAssignment2$s1b
 #There're 4 columns
-HonggengLuAssignment2$s1c <- names(diamonds);HonggengLuAssignment2$s1c
+HonggengLuAssignment2$s1c <- names(diamondsURL);HonggengLuAssignment2$s1c
 #The header names are "carat" "cut" "clarity" "price"
-HonggengLuAssignment2$s1d <- summary(diamonds$price);HonggengLuAssignment2$s1d
+HonggengLuAssignment2$s1d <- summary(diamondsURL$price);HonggengLuAssignment2$s1d
 #The results are below:
 #Min. 1st    Qu.  Median    Mean  3rd Qu.    Max.    NA's 
 #    420     450     600     650     825     980       1 
